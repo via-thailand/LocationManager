@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "INTULocationManager"
-  s.version               = "4.4.0"
+  s.version               = "4.4.1"
   s.homepage              = "https://github.com/intuit/LocationManager"
   s.license               = 'MIT'
   s.author                = { "Lucien Dupont" => "lucien@chromedomesoftware.com" }

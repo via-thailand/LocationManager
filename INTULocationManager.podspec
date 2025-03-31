@@ -5,6 +5,14 @@ Pod::Spec.new do |s|
   s.license               = 'MIT'
   s.author                = { "Lucien Dupont" => "lucien@chromedomesoftware.com" }
   s.source                = { :git => "https://github.com/intuit/LocationManager.git", :tag => "v4.4.0" }
+  s.pod_target_xcconfig = {
+   'VALID_ARCHS' => 'arm64 x86_64',
+   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = {
+   'VALID_ARCHS' => 'arm64 x86_64',
+   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
   s.source_files          = 'LocationManager/INTULocationManager'
   s.platform              = :ios
   s.ios.deployment_target = '12.0'

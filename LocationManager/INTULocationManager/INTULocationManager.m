@@ -81,10 +81,7 @@ static id _sharedInstance;
  */
 + (INTULocationServicesState)locationServicesState
 {
-    if ([CLLocationManager locationServicesEnabled] == NO) {
-        return INTULocationServicesStateDisabled;
-    }
-    else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         return INTULocationServicesStateNotDetermined;
     }
     else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
